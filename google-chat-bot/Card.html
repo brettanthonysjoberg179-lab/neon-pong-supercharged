@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif; 
+      background: #070b1a; 
+      color: #e8f0ff; 
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .container { max-width: 400px; margin: 0 auto; }
+    h1 { 
+      background: linear-gradient(90deg, #22d3ee, #f472b6); 
+      -webkit-background-clip: text; 
+      background-clip: text; 
+      color: transparent; 
+      font-size: 32px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .subtitle { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+    .card {
+      background: #111936;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 2px solid #2c3a78;
+    }
+    .card h2 { font-size: 16px; margin-bottom: 8px; color: #22d3ee; }
+    .card p { font-size: 13px; opacity: 0.85; line-height: 1.5; }
+    button { 
+      display: block; 
+      width: 100%; 
+      margin: 8px 0; 
+      padding: 14px; 
+      border: 0; 
+      border-radius: 12px; 
+      background: #111936; 
+      color: #e8f0ff; 
+      font-size: 16px; 
+      font-weight: 700; 
+      border: 2px solid #2c3a78; 
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    button:hover { border-color: #22d3ee; }
+    button:active { transform: scale(0.97); }
+    button.primary { border-color: #fbbf24; }
+    .online-link {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      background: #111936;
+      border-radius: 12px;
+      color: #22d3ee;
+      text-decoration: none;
+      font-weight: 700;
+      border: 2px solid #2c3a78;
+      margin-top: 16px;
+    }
+    .online-link:hover { border-color: #22d3ee; }
+    .emoji { font-size: 20px; margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NEON PONG</h1>
+    <p class="subtitle">Supercharged 2-player pong with tricks, targets, and smashes</p>
+    
+    <div class="card">
+      <h2>🎮 How to Play</h2>
+      <p>Drag your paddle. Hit gold targets, build rallies (x2 at 5, x3 at 10, x4 at 20), land edge, spin and smash tricks, and race to 5 goals!</p>
+    </div>
+    
+    <div class="card">
+      <h2>🌐 Online Multiplayer</h2>
+      <p>Play with a friend! Share a room code and connect via WebSocket.</p>
+      <button class="primary" onclick="window.open('https://neon-pong-online.brettanthonysjoberg179.workers.dev/client.html')">
+        <span class="emoji">🎮</span>Play Online
+      </button>
+    </div>
+    
+    <div class="card">
+      <h2>🤖 Single Player</h2>
+      <p>Challenge the AI at 3 difficulty levels.</p>
+      <button onclick="window.open('https://neon-pong-online.brettanthonysjoberg179.workers.dev/client.html?mode=ai')">
+        <span class="emoji">🤖</span>vs Computer
+      </button>
+    </div>
+    
+    <a class="online-link" href="https://neon-pong-online.brettanthonysjoberg179.workers.dev" target="_blank">
+      Open in Browser →
+    </a>
+  </div>
+</body>
+</html>
